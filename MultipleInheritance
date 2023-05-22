@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace exp2staticclass
+{
+ internal class Program
+ {
+ interface IShape
+ {
+ void Draw();
+ }
+ interface IColor
+ {
+ void FillColor();
+ }
+ class Circle : IShape, IColor
+ {
+ public void Draw()
+ {
+ Console.WriteLine("Drawing a circle.");
+ }
+ public void FillColor()
+ {
+ Console.WriteLine("Filling color in a circle.");
+ }
+ }
+ static void Main(string[] args)
+ {
+ Circle circle = new Circle();
+ circle.Draw(); // Drawing a circle
+ circle.FillColor(); // Filling color in a circle
+ Console.ReadLine();
+ }
+ }
+}
